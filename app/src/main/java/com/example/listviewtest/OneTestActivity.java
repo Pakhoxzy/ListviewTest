@@ -23,12 +23,12 @@ public class OneTestActivity extends AppCompatActivity {
         ListView list = (ListView) findViewById(R.id.list_view_2);
 //生成动态数组，加入数据
         ArrayList<HashMap<String, Object>> listItem = new ArrayList<HashMap<String, Object>>();
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < 10; i++) {
             HashMap<String, Object> map = new HashMap<String, Object>();
-            map.put("image", R.drawable.checked);//图像资源的ID
-            map.put("name", "Level" + i);
-            map.put("size", "Finished");
-            map.put("button", "click");
+            map.put("image", R.drawable.timg);//图像资源的ID
+            map.put("name", "联系人" + i);
+            map.put("size", "@E-mail");
+            map.put("button", "呼叫");
             listItem.add(map);
         }
 //生成适配器的Item和动态数组对应的元素
@@ -48,7 +48,7 @@ public class OneTestActivity extends AppCompatActivity {
                                     long arg3) {
                 Toast tot = Toast.makeText(
                         OneTestActivity.this,
-                        "点击了第" + arg2 + "个项目",
+                        "点击了第" + arg2 + "个联系人",
                         Toast.LENGTH_SHORT);
                 tot.show();
             }
